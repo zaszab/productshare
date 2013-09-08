@@ -9,3 +9,5 @@ Features:
 - exports to the 3 biggest Hungarian comparison site formats
 - create rules to limit the exported products
 - view statistics about click throughs
+
+Application was built on Symfony2 PHP framework, and Bootstrap Front-end framework.
