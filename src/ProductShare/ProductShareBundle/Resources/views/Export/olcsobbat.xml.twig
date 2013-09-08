@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<catalog>
+{% for product in products %}
+    <product>
+        <id>{{ product.productId }}</id>
+        <manufacturer><![CDATA[{{ product.manufacturer }}]]></manufacturer>
+        <name><![CDATA[{{ product.name }}]]></name>
+        <netprice>{{ product.netPrice }}</netprice>
+        <grossprice>{{ product.grossPrice }}</grossprice>
+        <grosspricecarriage>{{ product.grossPrice }}</grosspricecarriage>
+        <stock>{{ product.stock > 0 ? 'true' : 'false' }}</stock>
+        <itemid>{{ product.productId }}</itemid>
+        <urlsite><![CDATA[{{ jump_url }}/{{ product.productId }}]]></urlsite>
+        <urlpicture><![CDATA[{{ product.imageLink }}]]></urlpicture>
+        <describe><![CDATA[{{ product.description }}]]></describe>
+        <category><![CDATA[{{ product.category|replace({' > ': ' / '}) }}]]></category>
+    </product>
+{% endfor %}
+</catalog>

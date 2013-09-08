@@ -1,0 +1,12 @@
+{% extends "ProductShareBundle::layout.html.twig" %}
+
+{% block content %}
+    <h1>Welcome to Product Share!</h1>
+    <ul id="demo-list" class="nav nav-tabs nav-stacked">
+        <li><a href="{{ path('_productshare_import') }}">Import product CSV</a></li>
+        <li><a href="{{ path('_productshare_import_sitemap') }}">Import from sitemap</a></li>
+        <li><a href="{{ path('_exports') }}">Exports</a></li>
+        <li><a href="{{ path('_export_management') }}">Manage exports</a></li>
+        <li><a href="{{ path('_export_statistics') }}">Product statistics</a></li>
+    </ul>
+{% endblock %}

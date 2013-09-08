@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<products>
+{% for product in products %}
+    <product>
+        <manufacturer>{{ product.manufacturer }}</manufacturer>
+        <category>{{ product.category }}</category>
+        <name>{{ product.name }}</name>
+        <price>{{ product.grossPrice }}</price>
+        <product_url>{{ jump_url }}/{{ product.productId }}</product_url>
+        <image_url>{{ product.imageLink }}</image_url>
+        <description>{{ product.description }}</description>
+    </product>
+{% endfor %}
+</products>

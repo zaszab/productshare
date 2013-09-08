@@ -1,0 +1,12 @@
+{% extends "ProductShareBundle:Secured:layout.html.twig" %}
+
+{% block title "Import products from sitemap" %}
+
+{% block content %}
+    <h1 class="title">Please import your Sitemap!</h1>
+    <form action="{{ path("_productshare_importing_sitemap") }}" method="post" {{ form_enctype(form) }}>
+        {{ form_widget(form) }}
+
+        <div><input class="btn btn-primary" type="submit" value="Go" /></div>
+    </form>
+{% endblock %}

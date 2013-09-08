@@ -1,0 +1,13 @@
+{% extends "ProductShareBundle:Secured:layout.html.twig" %}
+
+{% block title "Import product CSV - Pair columns" %}
+
+{% block content %}
+    <h2 class="title">Pair columns</h2>
+
+    <form action="{{ path("_import_start") }}" method="post" class="import_form" {{ form_enctype(form) }}>
+        {{ form_widget(form) }}
+
+        <div><input class="btn btn-primary" type="submit" value="Upload Document" /></div>
+    </form>
+{% endblock %}

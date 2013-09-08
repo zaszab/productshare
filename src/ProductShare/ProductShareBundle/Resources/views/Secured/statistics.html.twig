@@ -1,0 +1,23 @@
+{% extends "ProductShareBundle:Secured:layout.html.twig" %}
+
+{% block title "Product export statistics" %}
+
+{% block content %}
+    <h2 class="title">Export statistics</h2>
+    <table class="table table-bordered table-striped table-hover">
+        <tr>
+            <th>Product name</th>
+            <th>Clicked</th>
+            <th>Buy</th>
+        </tr>
+        {% if clickstats %}
+            {% for stat in clickstats %}
+                <tr>
+                    <td>{{ stat[0].getProduct }}</td>
+                    <td>{{ stat['num'] }}</td>
+                    <td>{{ stat[0].getProductId in buystats|keys ? buystats[stat[0].getProductId] : 0 }}</td>
+                </tr>
+            {% endfor %}
+        {% endif %}
+    </table>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends "ProductShareBundle:Secured:layout.html.twig" %}
+
+{% block title "Import finished" %}
+
+{% block content %}
+    <h1 class="title">Import finished!</h1>
+    <h3>{{ productCount }} product imported!</h3>
+    <div><a href="{{ path('_exports') }}">Link to exports</a></div>
+{% endblock %}

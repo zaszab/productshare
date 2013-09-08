@@ -1,0 +1,12 @@
+{% extends "ProductShareBundle:Secured:layout.html.twig" %}
+
+{% block title "Import product CSV" %}
+
+{% block content %}
+    <h1 class="title">Please import your product CSV!</h1>
+    <form action="{{ path("_import_first_line") }}" method="post" {{ form_enctype(form) }}>
+        {{ form_errors(form.file) }}
+        {{ form_widget(form.file) }}
+        <div><input class="btn btn-primary" type="submit" value="Upload Document" /></div>
+    </form>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "ProductShareBundle:Secured:layout.html.twig" %}
+
+{% block title "Product exports" %}
+
+{% block content %}
+    <h2 class="title">Choose your export</h2>
+    <ul class="nav nav-tabs nav-stacked">
+    {% for export in exports %}
+        <li><a target="_blank" href="{{ path('_productshare_export') }}{{ export }}">{{ export }}</a></li>
+    {% endfor %}
+    </ul>
+{% endblock %}

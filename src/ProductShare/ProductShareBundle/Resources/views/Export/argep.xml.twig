@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<termeklista>
+{% for product in products %}
+    <termek>
+        <cikkszam><![CDATA[{{ product.sku }}]]></cikkszam>
+        <nev><![CDATA[{{ product.name }}]]></nev>
+        <leiras><![CDATA[{{ product.description }}]]></leiras>
+        <ar>{{ product.grossPrice }}</ar>
+        <fotolink><![CDATA[{{ product.imageLink }}]]></fotolink>
+        <termeklink><![CDATA[{{ jump_url }}/{{ product.productId }}]]></termeklink>
+        <kategoria><![CDATA[{{ product.category }}]]></kategoria>
+        <gyarto><![CDATA[{{ product.manufacturer }}]]></gyarto>
+    </termek>
+{% endfor %}
+</termeklista>

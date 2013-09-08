@@ -1,0 +1,90 @@
+<?php
+/**
+ * Az osztály rövid leírása
+ *
+ * Az osztály hosszú leírása, példakód
+ * akár több sorban is
+ * 
+ * @package
+ * @author Szabolcs
+ * @since 2013.04.14. 15:20
+ */
+
+namespace Szabi\TestBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="product")
+ * @package Szabi\TestBundle\Entity
+ */
+class Product {
+    /**
+     * @ORM\Id
+     * @ORM\Column(type="integer")
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    protected $product_id;
+
+    /**
+     * @ORM\Column(type="string", length=100)
+     */
+    protected $sku;
+
+    /**
+     * @ORM\Column(type="string", length=100)
+     */
+    protected $model;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    protected $name;
+
+    /**
+     * @ORM\Column(type="decimal", scale=2)
+     */
+    protected $net_price;
+
+    /**
+     * @ORM\Column(type="decimal", scale=2)
+     */
+    protected $tax;
+
+    /**
+     * @ORM\Column(type="decimal", scale=2)
+     */
+    protected $discount_price;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    protected $category;
+
+    /**
+     * @ORM\Column(type="text")
+     */
+    protected $description;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    protected $product_link;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    protected $image_link;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    protected $stock;
+
+}

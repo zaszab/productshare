@@ -1,0 +1,30 @@
+{% extends "ProductShareBundle:Secured:layout.html.twig" %}
+
+{% block title "Product export rules" %}
+
+{% block content %}
+    <h2 class="title">Rule management</h2>
+    <table class="table table-bordered table-striped table-hover">
+        <tr>
+            <th>Rule ID</th>
+            <th>Column</th>
+            <th>Type</th>
+            <th>Filter</th>
+            <th>For export</th>
+            <th>Published</th>
+        </tr>
+        {% for rule in rules %}
+            <tr>
+                <td><a href="{{ path('_export_add_rule') }}/{{ rule.id }}">{{ rule.id }}</a></td>
+                <td>{{ rule.column }}</td>
+                <td>{{ rule.getRuletypeName }}</td>
+                <td>{{ rule.filter }}</td>
+                <td>{{ rule.export == '' ? 'All' : rule.export }}</td>
+                <td>{{ rule.published ? '<i class="icon-ok"></i>' : '<i class="icon-ban-circle"></i>' }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <div>
+        <a class="btn" href="{{ path('_export_add_rule') }}">Add new rule</a>
+    </div>
+{% endblock %}

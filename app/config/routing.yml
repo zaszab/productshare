@@ -1,0 +1,22 @@
+_productshare_test:
+    resource: "@ProductShareBundle/Controller/DefaultController.php"
+    type:     annotation
+    prefix:   /productshare
+
+_productshare_secured:
+    resource: "@ProductShareBundle/Controller/SecuredController.php"
+    type:     annotation
+
+_productshare_export:
+    resource: "@ProductShareBundle/Controller/ExportController.php"
+    type:     annotation
+    prefix:   /
+
+_productshare_statistics:
+    resource: "@ProductShareBundle/Controller/StatisticsController.php"
+    type:     annotation
+    prefix:   /
+
+_routing:
+    resource: "@BraincraftedBootstrapDemoBundle/Resources/config/routing.yml"
+    prefix:   /bootstrap

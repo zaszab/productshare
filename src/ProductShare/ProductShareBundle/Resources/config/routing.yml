@@ -1,0 +1,7 @@
+  _productshare:
+    pattern:  /
+    defaults: { _controller: ProductShareBundle:Default:index }
+
+productshare_test_hello:
+    pattern:  /{name}
+    defaults: { _controller: ProductShareBundle:Default:hello }
