@@ -411,7 +411,10 @@ class Product {
     public function setArray($array)
     {
         foreach ($array as $key => $val) {
-            if (property_exists($this, $key)) {
+            if (
+                property_exists($this, $key)
+                && $val !== false
+            ) {
                 $this->$key = $val;
             }
         }

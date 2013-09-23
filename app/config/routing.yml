@@ -7,6 +7,10 @@ _productshare_secured:
     resource: "@ProductShareBundle/Controller/SecuredController.php"
     type:     annotation
 
+_productshare_import:
+    resource: "@ProductShareBundle/Controller/ImportController.php"
+    type:     annotation
+
 _productshare_export:
     resource: "@ProductShareBundle/Controller/ExportController.php"
     type:     annotation

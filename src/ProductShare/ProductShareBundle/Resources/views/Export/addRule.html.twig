@@ -1,0 +1,19 @@
+{% extends "ProductShareBundle:Secured:layout.html.twig" %}
+
+{% block title "Product exports" %}
+
+{% block content %}
+    <form action="{{ path("_export_add_rule") }}/{{ id }}" method="post" class="import_form" {{ form_enctype(form) }}>
+        {% if id %}
+            <h3>Editing rule: #{{ id }}</h3>
+        {% endif %}
+        {{ form_widget(form) }}
+
+        <div>
+            <input type="submit" class="btn btn-primary" value="{{ id ? 'Edit rule' : 'Add rule' }}" />
+            {% if id %}
+            <input type="button" class="btn btn-danger" value="Delete rule" onclick="if(confirm('Are you sure?')) { document.location = '{{ path("_export_delete_rule", { 'id': id }) }}'; }" />
+            {% endif %}
+        </div>
+    </form>
+{% endblock %}

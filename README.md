@@ -10,4 +10,4 @@ Features:
 - create rules to limit the exported products
 - view statistics about click throughs
 
-Application was built on Symfony2 PHP framework, and Bootstrap Front-end framework.
+Application was built on Symfony2 and Twitter Bootstrap 2.

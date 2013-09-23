@@ -1,0 +1,10 @@
+{% extends "ProductShareBundle:Secured:layout.html.twig" %}
+
+{% block title "Sitemap import finished" %}
+
+{% block content %}
+    <h1 class="title">Sitemap import finished!</h1>
+    <h3>{{ productCount }} product imported!</h3>
+    <div><a href="{{ path('_exports') }}">Link to exports</a></div>
+    <div><a href="{{ path('_export_management') }}">Export management</a></div>
+{% endblock %}
